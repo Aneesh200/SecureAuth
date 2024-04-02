@@ -4,7 +4,7 @@ import { connect } from 'mongoose';
 const URL = process.env.URL;
 
 const connectToMongo = () =>{
-    connect(URL , {useNewUrlParser: true})
+    connect(URL ,)
     .then(()=>{
         console.log("Connected to Mongo Successfully")
     })
@@ -12,3 +12,5 @@ const connectToMongo = () =>{
         console.error("Error connecting to DB", error);
     })
 }
+
+export default connectToMongo;
